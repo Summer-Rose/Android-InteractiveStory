@@ -36,4 +36,10 @@ public class MainActivity extends Activity {
         intent.putExtra(getString(R.string.key_name), name);
         startActivity(intent);
     }
+    //Resets name field when Play Again is clicked on final page
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mNameField.setText("");
+    }
 }
